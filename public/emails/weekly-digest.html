@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI Careers — Weekly AI Job Digest</title>
+<style>
+body{margin:0;padding:0;background:#f8fafc;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+.container{max-width:600px;margin:0 auto;background:#fff}
+.header{background:linear-gradient(135deg,#0070c4,#c026d3);padding:36px 30px;text-align:center}
+.header h1{color:#fff;font-size:26px;font-weight:800;margin:0;letter-spacing:-1px}
+.header p{color:rgba(255,255,255,.85);font-size:15px;margin:6px 0 0}
+.content{padding:28px 30px}
+.job{border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.job.featured{border-color:#0c8ee7;background:#f0f7ff}
+.job h3{font-size:17px;font-weight:700;color:#0f172a;margin:0 0 4px}
+.job .meta{font-size:13px;color:#64748b}
+.job .meta span{display:inline-block;background:#f1f5f9;padding:2px 8px;border-radius:4px;margin-right:6px}
+.btn{display:inline-block;background:#0070c4;color:#fff;text-decoration:none;padding:12px 28px;border-radius:8px;font-weight:600}
+.footer{padding:24px 30px;text-align:center;font-size:12px;color:#94a3b8;background:#f8fafc}
+.stats{text-align:center;padding:16px;background:#f8fafc;border-radius:12px;margin-bottom:20px}
+.stats .n{font-size:22px;font-weight:800;color:#0f172a}
+.stats .l{font-size:13px;color:#64748b}
+</style></head>
+<body>
+<div class="container">
+<div class="header"><h1>AI Careers</h1><p>Your Weekly AI Job Digest</p></div>
+<div class="content">
+<p style="font-size:15px;color:#64748b;margin:0 0 20px">Hi there, here are this week's top AI opportunities.</p>
+<table width="100%" cellpadding="0" cellspacing="0" class="stats"><tr>
+<td align="center"><div class="n">{{newJobsCount}}</div><div class="l">New Jobs</div></td>
+<td align="center"><div class="n">{{companiesCount}}</div><div class="l">Companies</div></td>
+<td align="center"><div class="n">{{avgSalary}}</div><div class="l">Avg. Salary</div></td>
+</tr></table>
+
+{{jobListHtml}}
+
+<div style="text-align:center;margin:28px 0"><a href="{{allJobsUrl}}" class="btn">View All Jobs</a></div>
+</div>
+<div class="footer">
+<p style="margin:0 0 6px">You received this because you subscribed to AI Careers job alerts.</p>
+<p style="margin:0"><a href="{{unsubscribeUrl}}" style="color:#94a3b8">Unsubscribe</a> · <a href="{{baseUrl}}" style="color:#94a3b8">AI Careers</a></p>
+<p style="margin:8px 0 0">&copy; 2024 AI Careers</p>
+</div></div></body></html>

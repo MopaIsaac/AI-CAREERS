@@ -1,15 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Brand palette */
+  --color-brand-50: #f0f7ff;
+  --color-brand-100: #e0effe;
+  --color-brand-200: #bae0fd;
+  --color-brand-300: #7cc8fb;
+  --color-brand-400: #36aaf5;
+  --color-brand-500: #0c8ee7;
+  --color-brand-600: #0070c4;
+  --color-brand-700: #015a9f;
+  --color-brand-800: #064d83;
+  --color-brand-900: #0b416d;
+  --color-brand-950: #07294a;
+
+  /* Accent palette */
+  --color-accent-50: #fdf4ff;
+  --color-accent-100: #fae8ff;
+  --color-accent-200: #f5d0fe;
+  --color-accent-300: #f0abfc;
+  --color-accent-400: #e879f9;
+  --color-accent-500: #d946ef;
+  --color-accent-600: #c026d3;
+  --color-accent-700: #a21caf;
+  --color-accent-800: #86198f;
+  --color-accent-900: #701a75;
+  --color-accent-950: #4a044e;
+
+  /* Surface palette */
+  --color-surface-50: #f8fafc;
+  --color-surface-100: #f1f5f9;
+  --color-surface-200: #e2e8f0;
+  --color-surface-300: #cbd5e1;
+  --color-surface-400: #94a3b8;
+  --color-surface-500: #64748b;
+  --color-surface-600: #475569;
+  --color-surface-700: #334155;
+  --color-surface-800: #1e293b;
+  --color-surface-900: #0f172a;
+  --color-surface-950: #020617;
+
+  --font-sans: 'Inter', var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', var(--font-geist-mono), monospace;
+}
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +62,40 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
+
+/* Utility classes -- use @apply in components or these class names directly */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-brand-600 text-white font-medium rounded-lg
+         hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2
+         transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 border-2 border-surface-300 text-surface-700 font-medium rounded-lg
+         hover:border-brand-500 hover:text-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2
+         transition-all duration-200;
+}
+.btn-ghost {
+  @apply inline-flex items-center justify-center px-4 py-2 text-surface-600 font-medium rounded-lg
+         hover:bg-surface-100 hover:text-surface-900 focus:outline-none focus:ring-2 focus:ring-brand-500
+         transition-all duration-200;
+}
+.input-field {
+  @apply w-full px-4 py-3 border border-surface-300 rounded-lg bg-white text-surface-900
+         placeholder:text-surface-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+         transition-all duration-200;
+}
+.card {
+  @apply bg-white rounded-xl border border-surface-200 shadow-sm hover:shadow-md transition-shadow duration-200;
+}
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+}
+.badge-green { @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800; }
+.badge-blue { @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800; }
+.badge-purple { @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800; }
+.badge-amber { @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800; }
+.section-heading { @apply text-3xl md:text-4xl font-bold text-surface-900; }
+.section-subheading { @apply text-lg text-surface-500 mt-2; }

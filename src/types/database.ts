@@ -49,10 +49,12 @@ export interface Database {
           location: string | null
           type: 'Full-time' | 'Part-time' | 'Contract' | 'Internship' | null
           remote_option: 'Remote' | 'Hybrid' | 'On-site' | null
-          status: 'draft' | 'published' | 'filled' | 'archived'
+          status: 'draft' | 'pending_approval' | 'published' | 'filled' | 'archived'
           is_featured: boolean
           expires_at: string | null
           application_url: string | null
+          payment_status: 'pending' | 'paid' | 'failed'
+          stripe_session_id: string | null
         }
         Insert: {
           id?: string
@@ -64,10 +66,12 @@ export interface Database {
           location?: string | null
           type?: 'Full-time' | 'Part-time' | 'Contract' | 'Internship' | null
           remote_option?: 'Remote' | 'Hybrid' | 'On-site' | null
-          status?: 'draft' | 'published' | 'filled' | 'archived'
+          status?: 'draft' | 'pending_approval' | 'published' | 'filled' | 'archived'
           is_featured?: boolean
           expires_at?: string | null
           application_url?: string | null
+          payment_status?: 'pending' | 'paid' | 'failed'
+          stripe_session_id?: string | null
         }
         Update: {
           id?: string
@@ -79,10 +83,12 @@ export interface Database {
           location?: string | null
           type?: 'Full-time' | 'Part-time' | 'Contract' | 'Internship' | null
           remote_option?: 'Remote' | 'Hybrid' | 'On-site' | null
-          status?: 'draft' | 'published' | 'filled' | 'archived'
+          status?: 'draft' | 'pending_approval' | 'published' | 'filled' | 'archived'
           is_featured?: boolean
           expires_at?: string | null
           application_url?: string | null
+          payment_status?: 'pending' | 'paid' | 'failed'
+          stripe_session_id?: string | null
         }
       }
       job_alerts: {

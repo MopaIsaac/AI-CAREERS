@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI Careers — Job Posting Confirmed</title>
+<style>
+body{margin:0;padding:0;background:#f8fafc;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+.container{max-width:560px;margin:24px auto;background:#fff;border-radius:16px;overflow:hidden}
+.header{background:linear-gradient(135deg,#0070c4,#c026d3);padding:32px 24px;text-align:center}
+.header h1{color:#fff;font-size:22px;font-weight:800;margin:0}
+.check{width:52px;height:52px;background:rgba(255,255,255,.2);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:24px;color:#fff;margin-bottom:10px}
+.content{padding:24px 28px}
+.row{display:flex;padding:8px 0;border-bottom:1px solid #f1f5f9}
+.row .l{width:110px;font-size:14px;color:#64748b;flex-shrink:0}
+.row .v{font-size:14px;color:#0f172a;font-weight:500}
+.price{background:#f0f7ff;border:1px solid #bae0fd;border-radius:12px;padding:18px;text-align:center;margin:16px 0}
+.price .amt{font-size:28px;font-weight:800;color:#0070c4}
+.price .plan{font-size:13px;color:#64748b}
+.btn{display:inline-block;background:#0070c4;color:#fff;text-decoration:none;padding:12px 28px;border-radius:8px;font-weight:600}
+.footer{padding:20px 28px;text-align:center;font-size:12px;color:#94a3b8}
+</style></head>
+<body>
+<div class="container">
+<div class="header"><div class="check">&#10003;</div><h1>Job Posting Confirmed!</h1><p style="color:rgba(255,255,255,.85);font-size:14px;margin:6px 0 0">Your listing is live on AI Careers</p></div>
+<div class="content">
+<p style="font-size:15px;color:#64748b;margin:0 0 16px">Your job has been posted and is visible to thousands of AI professionals.</p>
+<div style="font-size:15px;font-weight:700;color:#0f172a;border-bottom:1px solid #e2e8f0;padding-bottom:8px;margin-bottom:12px">Job Details</div>
+<div class="row"><span class="l">Job Title</span><span class="v">{{jobTitle}}</span></div>
+<div class="row"><span class="l">Company</span><span class="v">{{companyName}}</span></div>
+<div class="row"><span class="l">Location</span><span class="v">{{location}}</span></div>
+<div class="row"><span class="l">Status</span><span class="v" style="color:#059669">Pending Approval</span></div>
+<div class="row"><span class="l">Expires</span><span class="v">{{expiresAt}}</span></div>
+<div class="price"><div class="plan">{{planName}}</div><div class="amt">{{price}}</div><p style="font-size:11px;color:#94a3b8;margin:4px 0 0">Payment via Stripe</p></div>
+<div style="text-align:center;margin:24px 0"><a href="{{dashboardUrl}}" class="btn">View Dashboard</a></div>
+</div>
+<div class="footer">
+<p style="margin:0">Need changes? <a href="{{editUrl}}" style="color:#0070c4">Edit your listing</a></p>
+<p style="margin:6px 0 0">&copy; 2024 AI Careers</p>
+</div></div></body></html>
