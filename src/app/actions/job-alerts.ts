@@ -10,10 +10,10 @@ export async function subscribeToAlerts(email: string, roleType: string) {
   const { error } = await supabase
     .from('job_alerts')
     .insert({
-      email,
+      email: email,
       preferred_role_type: roleType || null,
       is_active: true
-    })
+    } as any)
 
   if (error) {
     console.error('Error subscribing to alerts:', error)
