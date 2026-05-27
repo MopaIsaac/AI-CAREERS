@@ -37,7 +37,7 @@ export async function GET(request: Request) {
     }
 
     // 3. Calculate Stats for the newsletter
-    const companiesSet = new Set(recentJobs.map(j => j.company_id))
+    const companiesSet = new Set((recentJobs as any[]).map(j => j.company_id))
     const newJobsCount = recentJobs.length.toString()
     const companiesCount = companiesSet.size.toString()
     const avgSalary = '£110k' // Mock calculation for now
